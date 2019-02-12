@@ -10,51 +10,59 @@ namespace Sprint9
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wat is je naam?");
-            String naam; naam = Console.ReadLine();
-            Console.WriteLine("Voer je wachtwoord in.");
-            String wachtwoord; wachtwoord = Console.ReadLine();
-            LogIn(wachtwoord, naam);
-            Console.WriteLine("Welk menu nummer?");
-            ShowMenu();
+            LogIn();
             Console.ReadLine();
         }
 
         private static void ShowMenu()
         {
+            Console.WriteLine("");
+            Console.WriteLine("Welk menu nummer?");
+            Console.WriteLine("Overzicht mp3 spelers (1) ");
+            Console.WriteLine("Exit (9)");
+
             ConsoleKey key;
             key = Console.ReadKey().Key;
+            Console.WriteLine("");
 
-            do
-            {             
-                if (key == ConsoleKey.D1){
-                    Console.WriteLine("geit");
+            switch (key)
+            {
+                case ConsoleKey.D1:
+                    {
+                        Console.WriteLine("gekozen actie: 1.Overzicht mp3 spelers");
+                        break;
+                    }
+                case ConsoleKey.D9:
                     break;
-                } else { 
-                    Console.WriteLine("hond");
-                    break;
-                }
-                    
-            } while (key != ConsoleKey.D9 );
-              
 
+                default:
+                    {
+                        break;
+                    }
 
+            }
         }
-
-        private static void LogIn(string wachtwoord, string naam)
+        private static void LogIn()
         {
+
+            Console.WriteLine("Wat is je naam?");
+            String naam; naam = Console.ReadLine();
+            Console.WriteLine("Voer je wachtwoord in.");
+            String wachtwoord = "";
+
             int x = 1;
             do
             {
+                wachtwoord = Console.ReadLine();
                 if (wachtwoord == "e")
                 {
                     Console.WriteLine("Welkom bij SoundSharp " + naam);
+                    ShowMenu();
                     break;
                 }
                 else if (x <= 2)
                 {
                     Console.WriteLine("Poging " + x + " van de 3.");
-                    Console.ReadLine();
                     x++;
                 }
                 else if (x == 3)
@@ -63,7 +71,7 @@ namespace Sprint9
                     x++;
                 }
             } while (x != 4);
-            
+
         }
     }
 }
