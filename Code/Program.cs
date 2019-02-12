@@ -10,9 +10,31 @@ namespace Sprint9
     {
         static void Main(string[] args)
         {
-            LogIn();
+           // LogIn();
+            
+
+
+            Mp3 mp;
+
+            mp.ID = 1;
+            mp.Brand = "GET technologies .inc";
+            mp.Model = "HF 410";
+            mp.MBSize = 4096;
+            mp.Price = 129.95;
+
+            Console.WriteLine(mp);
+
             Console.ReadLine();
         }
+
+        struct Mp3
+        {
+            public int ID;
+            public string Brand;
+            public string Model;
+            public int MBSize;
+            public double Price;
+        };
 
         private static void ShowMenu()
         {
