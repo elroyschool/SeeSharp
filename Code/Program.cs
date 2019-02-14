@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,21 +11,7 @@ namespace Sprint9
     {
         static void Main(string[] args)
         {
-           // LogIn();
-            
-
-
-            Mp3 mp;
-
-            mp.ID = 1;
-            mp.Brand = "GET technologies .inc";
-            mp.Model = "HF 410";
-            mp.MBSize = 4096;
-            mp.Price = 129.95;
-
-            Console.WriteLine(mp);
-
-            Console.ReadLine();
+            LogIn();
         }
 
         struct Mp3
@@ -35,6 +22,110 @@ namespace Sprint9
             public int MBSize;
             public double Price;
         };
+		
+        private static void ShowMp3s()
+        {
+            ShowMp31();
+            ShowMp32();
+            ShowMp33();
+            ShowMp34();
+            ShowMp35();
+        }
+		
+        private static void ShowMp31()
+        {
+            Mp3 mp;
+
+            mp.ID = 1;
+            mp.Brand = "GET technologies .inc";
+            mp.Model = "HF 410";
+            mp.MBSize = 4096;
+            mp.Price = 129.95;
+
+            Console.WriteLine();
+            Console.WriteLine("ID: " + mp.ID);
+            Console.WriteLine("Brand: " + mp.Brand);
+            Console.WriteLine("Model: " + mp.MBSize);
+            Console.WriteLine("MBSize: " + mp.MBSize);
+            Console.WriteLine("Price: " + mp.Price);
+
+        }
+
+        private static void ShowMp32()
+        {
+            Mp3 mp;
+
+            mp.ID = 2;
+            mp.Brand = "Far & Loud";
+            mp.Model = "XM 600";
+            mp.MBSize = 8192;
+            mp.Price = 224.95;
+
+            Console.WriteLine();
+            Console.WriteLine("ID: " + mp.ID);
+            Console.WriteLine("Brand: " + mp.Brand);
+            Console.WriteLine("Model: " + mp.MBSize);
+            Console.WriteLine("MBSize: " + mp.MBSize);
+            Console.WriteLine("Price: " + mp.Price);
+
+        }
+		
+        private static void ShowMp33()
+        {
+            Mp3 mp;
+
+            mp.ID = 3;
+            mp.Brand = "Innotivative";
+            mp.Model = "Z3";
+            mp.MBSize = 512;
+            mp.Price = 79.85;
+
+            Console.WriteLine();
+            Console.WriteLine("ID: " + mp.ID);
+            Console.WriteLine("Brand: " + mp.Brand);
+            Console.WriteLine("Model: " + mp.MBSize);
+            Console.WriteLine("MBSize: " + mp.MBSize);
+            Console.WriteLine("Price: " + mp.Price);
+
+        }
+		
+        private static void ShowMp34()
+        {
+            Mp3 mp;
+
+            mp.ID = 4;
+            mp.Brand = "Resistance S.A.";
+            mp.Model = "3001";
+            mp.MBSize = 4096;
+            mp.Price = 124.95;
+
+            Console.WriteLine();
+            Console.WriteLine("ID: " + mp.ID);
+            Console.WriteLine("Brand: " + mp.Brand);
+            Console.WriteLine("Model: " + mp.MBSize);
+            Console.WriteLine("MBSize: " + mp.MBSize);
+            Console.WriteLine("Price: " + mp.Price);
+
+        }
+		
+        private static void ShowMp35()
+        {
+            Mp3 mp;
+
+            mp.ID = 5;
+            mp.Brand = "CBA";
+            mp.Model = "NXT volume";
+            mp.MBSize = 2048;
+            mp.Price = 159.95;
+
+            Console.WriteLine();
+            Console.WriteLine("ID: " + mp.ID);
+            Console.WriteLine("Brand: " + mp.Brand);
+            Console.WriteLine("Model: " + mp.MBSize);
+            Console.WriteLine("MBSize: " + mp.MBSize);
+            Console.WriteLine("Price: " + mp.Price);
+
+        }
 
         private static void ShowMenu()
         {
@@ -51,19 +142,18 @@ namespace Sprint9
             {
                 case ConsoleKey.D1:
                     {
-                        Console.WriteLine("gekozen actie: 1.Overzicht mp3 spelers");
+                        ShowMp3s();
                         break;
                     }
                 case ConsoleKey.D9:
                     break;
-
                 default:
                     {
                         break;
                     }
-
             }
         }
+		
         private static void LogIn()
         {
 
@@ -71,26 +161,25 @@ namespace Sprint9
             String naam; naam = Console.ReadLine();
             Console.WriteLine("Voer je wachtwoord in.");
             String wachtwoord = "";
-
+        
             int x = 1;
             do
             {
                 wachtwoord = Console.ReadLine();
-                if (wachtwoord == "e")
+                x++;
+                if (wachtwoord == "SOUNDSHARP")
                 {
                     Console.WriteLine("Welkom bij SoundSharp " + naam);
                     ShowMenu();
                     break;
                 }
-                else if (x <= 2)
+                else if (x == 2)
                 {
-                    Console.WriteLine("Poging " + x + " van de 3.");
-                    x++;
+                    Console.WriteLine("Poging " + x + " van de 3.");                   
                 }
                 else if (x == 3)
                 {
-                    Console.WriteLine("Let op laatste poging!");
-                    x++;
+                    Console.WriteLine("Let op laatste poging!");                    
                 }
             } while (x != 4);
 
