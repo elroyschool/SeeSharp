@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\..\..\OneDrive\Documenten\Scrum\CSharp.cs" />
+    <Compile Include="Mp3Struct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
