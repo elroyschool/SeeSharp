@@ -13,7 +13,7 @@ namespace Program
     {
         public static List<MP3> MediaPlayers = new List<MP3>();
 
-        static void Main(string[] args)
+        static void Main()
         {
             LogIn();
             Console.ReadLine();
@@ -33,6 +33,7 @@ namespace Program
             Console.WriteLine("Exit (9)");
 
             MediaPlayerList();
+
             ConsoleKey key;
             key = Console.ReadKey().Key;
             Console.WriteLine("");
