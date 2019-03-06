@@ -28,8 +28,10 @@ namespace Program
             Console.WriteLine("Overzicht mp3 spelers (1) ");
             Console.WriteLine("Vooraad mp3 spelers (2) ");
             Console.WriteLine("Verander vooraad mp3 spelers (3) ");
+            Console.WriteLine("Statistieken (4) ");
             Console.WriteLine("Exit (9)");
 
+            MediaPlayerList();
             ConsoleKey key;
             key = Console.ReadKey().Key;
             Console.WriteLine("");
@@ -38,20 +40,22 @@ namespace Program
             {
                 case ConsoleKey.D1:
                     {
-                        MediaPlayerList();
                         ShowMp3s();
                         break;
                     }
                 case ConsoleKey.D2:
                     {
-                        MediaPlayerList();
                         ShowStock();
                         break;
                     }
                 case ConsoleKey.D3:
                     {
-                        MediaPlayerList();
                         StockChange();
+                        break;
+                    }
+                case ConsoleKey.D4:
+                    {
+                        Statistics();
                         break;
                     }
                 case ConsoleKey.D8:
@@ -67,6 +71,34 @@ namespace Program
                     }
             }
         }
+
+        static void Statistics()
+        {
+            float totalMp3 = MediaPlayers.Count;
+            double totalPriceMp3 = 0.00;
+            List<double> mp3PricePerMB = new List<double>();
+
+
+
+            foreach (MP3 mpData in MediaPlayers)
+            {
+                totalPriceMp3 = ((mpData.Price * mpData.Stock) + totalPriceMp3);
+                totalMp3 = (mpData.Stock + totalMp3);
+                mp3PricePerMB.Add(mpData.Mb / mpData.Price);
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Totaal aantal Mp3s in voorraad: " + totalMp3);
+            Console.WriteLine("Totaal waarde Mp3s in voorraad: " + totalPriceMp3 + " euro");
+
+            double averagePriceMp3 = (totalPriceMp3 / totalMp3);
+            Console.WriteLine("Gemiddelde prijs Mp3s: {0} euro", averagePriceMp3);
+            Console.WriteLine("");
+
+            int mediaPlayerPriceMbId = mp3PricePerMB.IndexOf(mp3PricePerMB.Min());
+            Console.WriteLine("Beste Prijs tot MB waarde:\n");
+            Console.WriteLine("ID:       {0}\nmake:     {1}\nmodel:    {2}\ncapacity: {3}\nprice:    {4}\nstock:    {5}", MediaPlayers[mediaPlayerPriceMbId].Id, MediaPlayers[mediaPlayerPriceMbId].Make, MediaPlayers[mediaPlayerPriceMbId].Model, MediaPlayers[mediaPlayerPriceMbId].Mb, MediaPlayers[mediaPlayerPriceMbId].Price, MediaPlayers[mediaPlayerPriceMbId].Stock);
+        }
+
 
         private static void LogIn()
         {
