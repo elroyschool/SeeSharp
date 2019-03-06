@@ -27,6 +27,7 @@ namespace Program
             Console.WriteLine("Welk menu nummer?");
             Console.WriteLine("Overzicht mp3 spelers (1) ");
             Console.WriteLine("Vooraad mp3 spelers (2) ");
+            Console.WriteLine("Verander vooraad mp3 spelers (3) ");
             Console.WriteLine("Exit (9)");
 
             ConsoleKey key;
@@ -45,6 +46,12 @@ namespace Program
                     {
                         MediaPlayerList();
                         ShowStock();
+                        break;
+                    }
+                case ConsoleKey.D3:
+                    {
+                        MediaPlayerList();
+                        StockChange();
                         break;
                     }
                 case ConsoleKey.D8:
@@ -105,6 +112,49 @@ namespace Program
             foreach (MP3 mpData in MediaPlayers)
             {
                 Console.WriteLine("ID: {0} Make: {1, -14} Model: {2, -12} Capacity: {3, -6} Price: {4, -8} Stock: {5}", mpData.Id, mpData.Make, mpData.Model, mpData.Mb, mpData.Price, mpData.Stock);
+            }
+        }
+
+        static void StockChange()
+        {
+            Boolean changeStock = true;
+
+            Console.WriteLine("");
+            ShowStock();
+            Console.WriteLine("");
+            Console.WriteLine("Toets de ID van de Mp3 in");
+
+            String ID = Console.ReadLine();
+            int mp3ID = Convert.ToInt32(ID);
+
+            if (mp3ID > MediaPlayers.Count || mp3ID < 0)
+            {
+                Console.WriteLine("ID bestaat niet");
+                Console.ReadLine();
+                return;
+            }
+
+            while (changeStock == true)
+            {
+                MP3 IDmp3 = MediaPlayers[mp3ID];
+
+                Console.WriteLine("Dit is de voorraad voor de verandering {0}:", IDmp3.Stock);
+                Console.WriteLine("Hoeveel moet er bij? Als het eraf moet doe er - voor.");
+
+                String verandering = Console.ReadLine();
+                int nieuwAantal = Convert.ToInt32(verandering);
+
+                if ((IDmp3.Stock = (IDmp3.Stock + nieuwAantal)) < 0)
+                {
+                    Console.WriteLine("Niet genoeg voorraad");
+                }
+                else
+                {
+                    MediaPlayers[mp3ID] = IDmp3;
+                    Console.WriteLine("Nieuw voorraad: {0}", IDmp3.Stock);
+
+                    changeStock = false;
+                }
             }
         }
 
