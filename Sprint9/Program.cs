@@ -29,6 +29,7 @@ namespace Program
             Console.WriteLine("Vooraad mp3 spelers (2) ");
             Console.WriteLine("Verander vooraad mp3 spelers (3) ");
             Console.WriteLine("Statistieken (4) ");
+            Console.WriteLine("Toevoegen Mp3 speler (5) ");
             Console.WriteLine("Exit (9)");
 
             MediaPlayerList();
@@ -56,6 +57,11 @@ namespace Program
                 case ConsoleKey.D4:
                     {
                         Statistics();
+                        break;
+                    }
+                case ConsoleKey.D5:
+                    {
+                        AddMp3();
                         break;
                     }
                 case ConsoleKey.D8:
@@ -129,6 +135,22 @@ namespace Program
                 }
             } while (x != 4);
 
+        }
+
+        static void AddMp3()
+        {
+            Console.WriteLine("Voer hier de informatie over de nieuwe Mp3 in \n\nID: {0}", (MediaPlayers.Count + 1));
+
+            Console.Write("Make: ");
+            string newMake = Console.ReadLine();
+            Console.Write("Model: ");
+            string newModel = Console.ReadLine();
+            Console.Write("MB: ");
+            float newMB = Convert.ToSingle(Console.ReadLine());
+            Console.Write("Price: ");
+            float newPrice = Convert.ToSingle(Console.ReadLine());
+
+            MediaPlayers.Add(new MP3((MediaPlayers.Count + 1), 0, newMake, newModel, newMB, newPrice));
         }
 
         static void ShowStock()
