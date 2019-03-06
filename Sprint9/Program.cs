@@ -179,7 +179,7 @@ namespace Program
             Console.WriteLine("Toets de ID van de Mp3 in");
 
             String ID = Console.ReadLine();
-            int mp3ID = Convert.ToInt32(ID);
+            int mp3ID = Convert.ToInt32(ID) - 1;
 
             if (mp3ID > MediaPlayers.Count || mp3ID < 0)
             {
@@ -206,7 +206,6 @@ namespace Program
                 {
                     MediaPlayers[mp3ID] = IDmp3;
                     Console.WriteLine("Nieuw voorraad: {0}", IDmp3.Stock);
-
                     changeStock = false;
                 }
             }
