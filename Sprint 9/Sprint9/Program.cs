@@ -20,7 +20,7 @@ namespace Program
         }
 
 
-
+        // Shows the menu witht the buttons you can press for certain things
         private static void ShowMenu()
         {
             Console.WriteLine("");
@@ -79,6 +79,7 @@ namespace Program
             }
         }
 
+        // Shows statistics of the mp3s
         static void Statistics()
         {
             float totalMp3 = MediaPlayers.Count;
@@ -106,7 +107,7 @@ namespace Program
             Console.WriteLine("ID:       {0}\nmake:     {1}\nmodel:    {2}\ncapacity: {3}\nprice:    {4}\nstock:    {5}", MediaPlayers[mediaPlayerPriceMbId].Id, MediaPlayers[mediaPlayerPriceMbId].Make, MediaPlayers[mediaPlayerPriceMbId].Model, MediaPlayers[mediaPlayerPriceMbId].Mb, MediaPlayers[mediaPlayerPriceMbId].Price, MediaPlayers[mediaPlayerPriceMbId].Stock);
         }
 
-
+        // "login" if correct login shows menu
         private static void LogIn()
         {
 
@@ -138,6 +139,7 @@ namespace Program
 
         }
 
+        // add new mp3s with given values
         static void AddMp3()
         {
             Console.WriteLine("Voer hier de informatie over de nieuwe Mp3 in \n\nID: {0}", (MediaPlayers.Count + 1));
@@ -154,6 +156,7 @@ namespace Program
             MediaPlayers.Add(new MP3((MediaPlayers.Count + 1), 0, newMake, newModel, newMB, newPrice));
         }
 
+        // show stock of mp3
         static void ShowStock()
         {
             foreach (MP3 mpData in MediaPlayers)
@@ -162,6 +165,7 @@ namespace Program
             }
         }
 
+        // show the mp3s with their information
         private static void ShowMp3s()
         {
             foreach (MP3 mpData in MediaPlayers)
@@ -170,6 +174,7 @@ namespace Program
             }
         }
 
+        // change stock of a mp3 
         static void StockChange()
         {
             Boolean changeStock = true;
@@ -212,6 +217,7 @@ namespace Program
             }
         }
 
+        // make the standard 5 mp3s
         public static void MediaPlayerList()
         {
             MediaPlayers.Add(new MP3(1, 500, "GetTech inc.", "HF 410", 4096, 129.99));

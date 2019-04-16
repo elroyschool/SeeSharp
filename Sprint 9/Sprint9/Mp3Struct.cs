@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MP3Constructor
 {
-
+    // mp3 struct
     public struct MP3
     {
 
