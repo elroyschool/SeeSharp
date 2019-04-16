@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AudioDevices.Track">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAABEAAgAhAAAAFAAAAAQAAAAIAAgg=</HashCode>
+      <FileName>Track.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="length" />
+      <Field Name="type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AudioDevices.TrackList">
+    <Position X="1.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAABAAAAABAQAAAAAAAEACAAAAABAEAA=</HashCode>
+      <FileName>TrackList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioDevices.AudioDevice">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BoAQIEAIAAAAAIAAAAAAACAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>AudioDevice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioDevices.MemoRecorder">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAACAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemoRecorder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="AudioDevices.Time">
+    <Position X="1.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAABBAAAAEAAAAAAAAAAAAAAAAAAABAAAAAQA=</HashCode>
+      <FileName>Time.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="AudioDevices.Category">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEIIACAgAAAAkAAAAEAAAAgQABKAAAAAAIgAIEIABAg=</HashCode>
+      <FileName>Category.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

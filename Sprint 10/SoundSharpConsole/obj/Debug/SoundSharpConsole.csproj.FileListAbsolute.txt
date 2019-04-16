@@ -1,0 +1,10 @@
+d:\SoundSharp\SoundSharpConsole\obj\Debug\SoundSharpConsole.csprojAssemblyReference.cache
+d:\SoundSharp\SoundSharpConsole\obj\Debug\SoundSharpConsole.csproj.CoreCompileInputs.cache
+d:\SoundSharp\SoundSharpConsole\bin\Debug\SoundSharpConsole.exe.config
+d:\SoundSharp\SoundSharpConsole\bin\Debug\SoundSharpConsole.exe
+d:\SoundSharp\SoundSharpConsole\bin\Debug\SoundSharpConsole.pdb
+d:\SoundSharp\SoundSharpConsole\bin\Debug\AudioDevices.dll
+d:\SoundSharp\SoundSharpConsole\bin\Debug\AudioDevices.pdb
+d:\SoundSharp\SoundSharpConsole\obj\Debug\SoundSharpConsole.csproj.CopyComplete
+d:\SoundSharp\SoundSharpConsole\obj\Debug\SoundSharpConsole.exe
+d:\SoundSharp\SoundSharpConsole\obj\Debug\SoundSharpConsole.pdb

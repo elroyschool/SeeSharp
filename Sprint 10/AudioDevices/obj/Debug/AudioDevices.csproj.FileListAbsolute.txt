@@ -1,0 +1,6 @@
+d:\SoundSharp\AudioDevices\bin\Debug\AudioDevices.dll
+d:\SoundSharp\AudioDevices\bin\Debug\AudioDevices.pdb
+d:\SoundSharp\AudioDevices\obj\Debug\AudioDevices.csproj.CoreCompileInputs.cache
+d:\SoundSharp\AudioDevices\obj\Debug\AudioDevices.dll
+d:\SoundSharp\AudioDevices\obj\Debug\AudioDevices.pdb
+d:\SoundSharp\AudioDevices\obj\Debug\AudioDevices.csprojAssemblyReference.cache

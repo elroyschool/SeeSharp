@@ -1,0 +1,14 @@
+c:\users\elroy\source\repos\Sprint9\Sprint9\bin\Debug\Sprint9.exe.config
+c:\users\elroy\source\repos\Sprint9\Sprint9\bin\Debug\Sprint9.exe
+c:\users\elroy\source\repos\Sprint9\Sprint9\bin\Debug\Sprint9.pdb
+c:\users\elroy\source\repos\Sprint9\Sprint9\obj\Debug\Sprint9.csprojAssemblyReference.cache
+c:\users\elroy\source\repos\Sprint9\Sprint9\obj\Debug\Sprint9.csproj.CoreCompileInputs.cache
+c:\users\elroy\source\repos\Sprint9\Sprint9\obj\Debug\Sprint9.exe
+c:\users\elroy\source\repos\Sprint9\Sprint9\obj\Debug\Sprint9.pdb
+C:\Users\elroy\source\repos\SeeSharp\Sprint9\bin\Debug\Sprint9.exe.config
+C:\Users\elroy\source\repos\SeeSharp\Sprint9\bin\Debug\Sprint9.exe
+C:\Users\elroy\source\repos\SeeSharp\Sprint9\bin\Debug\Sprint9.pdb
+C:\Users\elroy\source\repos\SeeSharp\Sprint9\obj\Debug\Sprint9.csprojAssemblyReference.cache
+C:\Users\elroy\source\repos\SeeSharp\Sprint9\obj\Debug\Sprint9.csproj.CoreCompileInputs.cache
+C:\Users\elroy\source\repos\SeeSharp\Sprint9\obj\Debug\Sprint9.exe
+C:\Users\elroy\source\repos\SeeSharp\Sprint9\obj\Debug\Sprint9.pdb

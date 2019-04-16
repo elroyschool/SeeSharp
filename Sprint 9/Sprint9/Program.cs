@@ -166,7 +166,7 @@ namespace Program
         {
             foreach (MP3 mpData in MediaPlayers)
             {
-                Console.WriteLine("ID: {0} Make: {1, -14} Model: {2, -12} Capacity: {3, -6} Price: {4, -8} Stock: {5}", mpData.Id, mpData.Make, mpData.Model, mpData.Mb, mpData.Price, mpData.Stock);
+                Console.WriteLine("ID: {0} Make: {1, -14} Model: {2, -12} Capacity: {3, -1} Price: {4, -8} Stock: {5}", mpData.Id, mpData.Make, mpData.Model, mpData.Mb, mpData.Price, mpData.Stock);
             }
         }
 
